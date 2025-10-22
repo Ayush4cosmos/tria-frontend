@@ -10,7 +10,6 @@ export default function AddContactModal({ onClose, onAdd }) {
   e.preventDefault()
   if (!name.trim()) return alert('Name is required')
 
-  // Generate random color for avatar
   const colors = [
     '#f97316', '#06b6d4', '#a78bfa', '#34d399', '#f59e0b',
     '#ef4444', '#3b82f6', '#ec4899', '#8b5cf6', '#14b8a6',

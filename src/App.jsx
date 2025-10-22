@@ -10,7 +10,6 @@ export default function App() {
   const [showAdd, setShowAdd] = useState(false)
   const [error, setError] = useState(null)
 
-  // 🔗 Replace with your Mocki API URL
   const API_URL = 'https://mocki.io/v1/a927097d-93a7-4063-ad80-f01cd2c69d77'
 
 
@@ -19,7 +18,7 @@ export default function App() {
     setLoading(true)
     setError(null)
 
-    // simulate network delay
+    // network delay
     setTimeout(() => {
       fetch(API_URL)
         .then((r) => {
