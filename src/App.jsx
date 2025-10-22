@@ -49,6 +49,13 @@ export default function App() {
     setContacts(prev => [...prev, contact].sort((a, b) => a.name.localeCompare(b.name)))
     setShowAdd(false)
   }
+  function handleUpdate(updatedContact) {
+  setContacts(prev =>
+    prev.map(c => (c.id === updatedContact.id ? updatedContact : c))
+  )
+  setSelectedContact(updatedContact)
+}
+
 
     const q = query.trim().toLowerCase()
     const filtered = contacts.filter(c => {
@@ -80,7 +87,9 @@ export default function App() {
         {selectedContact && (
             <ContactDetailModal
               contact={selectedContact}
-              onClose={() => setSelectedContact(null)}/>
+              onClose={() => setSelectedContact(null)}
+              onUpdate={handleUpdate}
+            />
         )}
     </main>
     </div>
