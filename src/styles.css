@@ -33,11 +33,11 @@ body{
   border:none;padding:8px 12px;border-radius:8px;font-weight:600;cursor:pointer;
 }
 .container{background:rgba(255,255,255,0.02);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
-/* Scrollable contact list box */
+
 .contact-box {
-  max-height: 70vh; /* controls how tall the box is */
+  max-height: 70vh; 
   overflow-y: auto;
-  padding-right: 4px; /* space for scrollbar */
+  padding-right: 4px; 
   scrollbar-width: thin;
   scrollbar-color: rgba(255,255,255,0.1) rgba(255,255,255,0.02);
 }
@@ -52,7 +52,6 @@ body{
 }
 
 
-/* Optional: custom scrollbar for WebKit browsers */
 .contact-box::-webkit-scrollbar {
   width: 6px;
 }
