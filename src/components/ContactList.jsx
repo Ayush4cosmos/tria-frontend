@@ -1,26 +1,23 @@
 import React from 'react'
 import ContactCard from './ContactCard'
 
-export default function ContactList({ contacts, loading, query }) {
-  if (loading) {
-    return <div className="state">Loading contacts…</div>
-  }
+export default function ContactList({ contacts, loading, query, onSelectContact }) {
+  if (loading) return <div className="state">Loading contacts…</div>
 
-  if (!contacts.length) {
-    if (query) {
-      return <div className="state">No results for “{query}”. Try a different name.</div>
-    } else {
-      return <div className="state">No contacts yet. Click “Add” to create one.</div>
-    }
-  }
+  if (!contacts.length)
+    return (
+      <div className="state">
+        {query ? `No results for “${query}”` : 'No contacts yet. Click “Add” to create one.'}
+      </div>
+    )
 
   return (
     <ul className="contact-grid">
       {contacts.map(c => (
-        <li key={c.id}><ContactCard contact={c} query={query} /></li>
+        <li key={c.id} onClick={() => onSelectContact(c)} style={{ cursor: 'pointer' }}>
+          <ContactCard contact={c} query={query} />
+        </li>
       ))}
     </ul>
   )
-
-  
 }

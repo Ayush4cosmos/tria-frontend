@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import SearchBar from './components/SearchBar'
 import ContactList from './components/ContactList'
 import AddContactModal from './components/AddContactModal'
+import ContactDetailModal from './components/ContactDetailModal'
 
 export default function App() {
   const [contacts, setContacts] = useState([])
@@ -9,6 +10,8 @@ export default function App() {
   const [query, setQuery] = useState('')
   const [showAdd, setShowAdd] = useState(false)
   const [error, setError] = useState(null)
+  const [selectedContact, setSelectedContact] = useState(null)
+
 
   const API_URL = 'https://mocki.io/v1/a927097d-93a7-4063-ad80-f01cd2c69d77'
 
@@ -69,12 +72,16 @@ export default function App() {
         {error && <div className="error">{error}</div>}
 
         <div className="contact-box">
-        <ContactList contacts={filtered} loading={loading} query={query} />
+        <ContactList contacts={filtered} loading={loading} query={query} onSelectContact={setSelectedContact} />
         </div>
 
         {showAdd && <AddContactModal onClose={() => setShowAdd(false)} onAdd={handleAdd} />}
 
-        
+        {selectedContact && (
+            <ContactDetailModal
+              contact={selectedContact}
+              onClose={() => setSelectedContact(null)}/>
+        )}
     </main>
     </div>
 
