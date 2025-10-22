@@ -74,9 +74,7 @@ export default function App() {
 
         {showAdd && <AddContactModal onClose={() => setShowAdd(false)} onAdd={handleAdd} />}
 
-        <footer className="footer">
-        <small>Contact list — using live Mocki API</small>
-        </footer>
+        
     </main>
     </div>
 
