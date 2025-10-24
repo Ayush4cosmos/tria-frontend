@@ -1,4 +1,6 @@
 # Tria Contacts — React Frontend
+![Homepage](https://github.com/user-attachments/assets/aa75c72f-298b-4922-91a7-01d6824eae00)![AddContact](https://github.com/user-attachments/assets/1ca4b8f6-dff5-4a86-9c99-86640beb64a1)
+![ContactPopup](https://github.com/user-attachments/assets/8e1e31b2-8918-4f2a-8dd4-409484b55ee5)
 
 ### Live Demo  
 🔗 [https://ayush4cosmos.github.io/tria-frontend](https://ayush4cosmos.github.io/tria-frontend)
