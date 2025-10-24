@@ -68,7 +68,7 @@ This mimics real-world API communication and demonstrates asynchronous fetching,
 
 ## Setup Instructions
 
-### 🪜 1. Clone the repository
+### 1. Clone the repository
 ```bash
 git clone https://github.com/ayush4cosmos/tria-frontend.git
 cd tria-frontend
