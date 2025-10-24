@@ -22,7 +22,6 @@ This mimics real-world API communication and demonstrates asynchronous fetching,
 
 - **How it works:**  
   The app sends a `fetch()` request to the endpoint, retrieves a JSON array of contacts, and dynamically renders them in the UI.  
-  A simulated 500 ms delay is added to feel like a real network call.
 
 ---
 
