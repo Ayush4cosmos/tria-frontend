@@ -1,6 +1,6 @@
 # Tria Contacts — React Frontend
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/aa75c72f-298b-4922-91a7-01d6824eae00" alt="Homepage" width="800"/>
+  <img src="https://github.com/user-attachments/assets/aa75c72f-298b-4922-91a7-01d6824eae00" alt="Homepage" width="500"/>
 </p>
 
 <p align="center">
